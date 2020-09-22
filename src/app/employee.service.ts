@@ -21,4 +21,7 @@ export class EmployeeService {
     //   {"id":4, "name":"Elena", "age":28}
     // ];
   }
+
+  
+  // postEmployees():Observable<IEmployee[]>
 }
