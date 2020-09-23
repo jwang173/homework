@@ -8,17 +8,23 @@ import { EmployeeService } from './employee.service';
 import { HttpClientModule } from '@angular/common/http';
 import { PostListComponent } from './post-list/post-list.component';
 import { PostService } from './post.service';
+import { AppRoutingModule } from './app-routing.module';
+import { HeaderComponent } from './header/header.component';
+import { PostCreateComponent } from './post-create/post-create.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeListComponent,
     EmployeeDetailComponent,
-    PostListComponent
+    PostListComponent,
+    HeaderComponent,
+    PostCreateComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [EmployeeService,PostService],
   bootstrap: [AppComponent]
