@@ -1,1 +1,24 @@
-<p>post-list works!</p>
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+    <div>
+      <table>
+        <tr>
+          <th>userid</th>
+          <th>id</th>
+          <th>title </th>
+          <th>body</th>
+          <th>Operations</th>
+        </tr>
+        <tr *ngFor="let post of posts">
+          <td>{{post.userId}}</td>
+          <td>{{post.id}}</td>
+          <td>{{post.title}}</td>
+          <td>{{post.body}}</td>
+          <td>
+            <button (click)="deletePost(post.id)">Delete</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  
