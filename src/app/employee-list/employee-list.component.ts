@@ -9,18 +9,23 @@ import { EmployeeService } from '../employee.service';
     <ul *ngFor="let employee of employees">
       <li>{{employee.name}}</li>
     </ul>
+    <h3>{{errorMsg}}</h3>
   `,
   styleUrls: ['./employee-list.component.css']
 })
 export class EmployeeListComponent implements OnInit {
 
   public employees = []
-
+  public errorMsg;
   constructor(private _employeeService: EmployeeService) { }
 
   ngOnInit(): void {
     this._employeeService.getEmployees()
-        .subscribe(data => this.employees =data);
+        .subscribe(data => this.employees =data
+          ,
+        error => {
+          this.errorMsg = error;
+        });
 
   }
 

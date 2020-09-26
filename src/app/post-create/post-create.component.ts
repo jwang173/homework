@@ -5,18 +5,18 @@ import { IPost } from '../post'
 
 @Component({
   selector: 'app-post-create',
-  template:`
-    <h1>
-      Welcome to {{title}}
-    <h1>
-  `,
-  // templateUrl: './post-create.component.html',
+  // template:`
+  //   <h1>
+  //     Welcome to {{title}}
+  //   <h1>
+  // `,
+  templateUrl: './post-create.component.html',
   styleUrls: ['./post-create.component.css']
 })
 export class PostCreateComponent implements OnInit {
 
   title = "Hello";
-  
+
   constructor(private _postService: PostService) { }
   // public newPost:IPost;
 

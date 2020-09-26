@@ -16,6 +16,7 @@ export class PostListComponent implements OnInit {
 
   public title = 'Homework';
   public posts:any = [];
+  public errorMsg;
 
   constructor(private _postService: PostService) { }
 
@@ -24,7 +25,10 @@ export class PostListComponent implements OnInit {
         .subscribe(data => {
           console.log(data);
           this.posts =data;
-        });
+        },
+        error => {
+          this.errorMsg = error;
+        })
   }
 
   deletePost(id) {
